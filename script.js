@@ -21,11 +21,10 @@ function initMap() {
   });
   const marker = 
     setInterval(() => {
-        marker.setMap(null)
         new google.maps.Marker({
             position: pos,
             map: map,
-        })
+        });
         console.log(pos);
     }, 5100);
   console.log(pos)
