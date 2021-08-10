@@ -1,6 +1,9 @@
 let pos;
 let speedText = document.getElementById('speed');
 let altText = document.getElementById('altitude');
+let changeUnits = document.getElementById('changeUnits');
+let kmPerHour = true;
+
 let iss;
 
 const ISSLocation = () => {
@@ -31,10 +34,21 @@ function initMap() {
 }, 5500)
 }
 
+changeUnits.addEventListener('click', changeSpeed);
+
+function changeSpeed() {
+  kmPerHour = !kmPerHour;
+  kmPerHour ? changeUnits.innerHTML = 'View m/s' : changeUnits.innerHTML = 'View km/h'
+}
 
 function updateDetails() {
   setInterval(() => {
-      speedText.innerHTML = Math.round(iss.velocity * 100) / 100 + ' m/sec';
+
+      if(kmPerHour) {
+        speedText.innerHTML = iss.velocity.toFixed(2) + ' km/h';
+      } else {
+        speedText.innerHTML = (iss.velocity / 3.6).toFixed(2) + ' m/s'
+      }
       altText.innerHTML = Math.round(iss.altitude * 100) / 100 + ' km'
     }, 5100)
 }
