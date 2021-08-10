@@ -6,14 +6,22 @@
     <title>Satellite Tracker</title>
 </head>
 <body>
-    <header><h1>Satellite Tracker</h1></header>
-    <section id='map'>
-        <h1>Loading Data...</h1>
-    </section>
-    <section id='details'>
-        <h2>Current Speed: &nbsp; <span class='detail-text' id='speed'>Loading speed...</span></h2><button id='changeUnits'>View m/s</button>
-        <h2>Current Altitude: &nbsp; <span class='detail-text' id="altitude">Loading altitude...</span></h2>
-    </section>
+    <div id=background>
+        <header><h1>Satellite Tracker</h1></header>
+        <section id='map'>
+            <h1>Loading Data...</h1>
+        </section>
+        <section id='details'>
+            <h2>Current Speed: &nbsp; <span class='detail-text' id='speed'>Loading speed...</span></h2><button id='changeUnits'>View m/s</button>
+            <h2>Current Altitude: &nbsp; <span class='detail-text' id="altitude">Loading altitude...</span></h2>
+        </section>
+        <section id='description'>
+            <h2>About this website:</h2>
+            <p>This simple website was created to demonstrate and practise the use of APIs and asynchronous coding.  <br>
+                The website uses Google Maps API for the map and Where ISS At to track the International Space Station as well as recieve data regarding the speed and altitude. <br>
+            The website updates the information every 5 seconds. </p>
+        </section>
+    </div>
 
 <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD5r8LBvbWF8E49sQ4VjFgJmnaFdMkzxQ&callback=initMap">

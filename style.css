@@ -1,3 +1,18 @@
+body {
+    background-image: url('./background.webp');
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: x-large;
+    text-align: center
+}
+
+header {
+    text-align: center;
+
+}
+
 #map {
     height: 600px;
     width: 100%;
